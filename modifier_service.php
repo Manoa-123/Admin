@@ -8,8 +8,7 @@ if (isset($_GET['id_service'])) {
     exit(); // Arrêtez le script pour éviter l'affichage du formulaire vide
 }
 // Connection à la base
-$conn = mysqli_connect("localhost", "root", "", "supercar");
-
+include('bdd/conexion_bdd.php');
 // Récupérez les données actuelles depuis la base de données
 $sql = "SELECT * FROM service WHERE id_service = $id_service";
 $result = mysqli_query($conn, $sql);
