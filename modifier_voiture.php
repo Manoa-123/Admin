@@ -8,7 +8,7 @@ if (isset($_GET['id_voiture'])) {
     exit(); // Arrêtez le script pour éviter l'affichage du formulaire vide
 }
 // Connection à la base
-$conn = mysqli_connect("localhost", "root", "", "supercar");
+include('bdd/conexion_bdd.php');
 
 // Récupérez les données actuelles depuis la base de données
 $sql = "SELECT * FROM voiture WHERE id_voiture = $id_voiture";
